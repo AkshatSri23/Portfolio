@@ -92,7 +92,7 @@ export function Navbar() {
               href={person.resumeFile}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 border border-[#176B52] bg-[#176B52] text-[#F7F6F0] font-sans font-medium text-[14px] rounded-[2px] transition-all duration-200 hover:bg-[#12523e] hover:border-[#12523e] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#176B52]"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 border border-[#0F4434] bg-[#0F4434] text-[#F7F6F0] font-sans font-medium text-[14px] rounded-[2px] transition-all duration-200 hover:bg-[#0B3528] hover:border-[#0B3528] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0F4434]"
             >
               <span>Resume</span>
               <span className="text-xs">↗</span>
@@ -141,7 +141,7 @@ export function Navbar() {
                 href={person.resumeFile}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 inline-flex items-center justify-center gap-2 p-3 border border-[#176B52] bg-[#176B52] text-[#F7F6F0] font-medium text-base rounded-[2px] hover:bg-[#12523e] hover:border-[#12523e] transition-colors"
+                className="mt-2 inline-flex items-center justify-center gap-2 p-3 border border-[#0F4434] bg-[#0F4434] text-[#F7F6F0] font-medium text-base rounded-[2px] hover:bg-[#0B3528] hover:border-[#0B3528] transition-colors"
               >
                 <span>Resume</span>
                 <span>↗</span>
