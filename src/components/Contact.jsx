@@ -101,15 +101,16 @@ export function Contact() {
               <button
                 type="button"
                 onClick={handleCopyEmail}
-                className="group flex items-center justify-between p-4 border border-white/[0.15] bg-white/[0.04] rounded-[2px] text-left transition-all duration-200 hover:border-l-[3px] hover:border-l-[#4FB08C] hover:bg-white/[0.07] focus-visible:outline-none"
+                className="group flex items-center justify-between p-4 border border-white/[0.15] bg-white/[0.04] rounded-[2px] text-left transition-all duration-200 hover:border-l-[3px] hover:border-l-[#4FB08C] hover:bg-white/[0.07] focus-visible:outline-none w-full"
                 aria-label={`Copy email: ${person.email}`}
               >
-                <div className="flex items-center gap-3">
-                  <Mail className="w-4 h-4 text-[#F7F6F0] group-hover:text-[#4FB08C] transition-colors" />
-                  <span className="text-[15px] font-medium text-[#F7F6F0]">Email</span>
-                  <span className="font-mono text-xs sm:text-sm text-[#F7F6F0]/70">{person.email}</span>
+                <div className="flex items-center gap-3 min-w-0">
+                  <Mail className="w-4 h-4 text-[#F7F6F0] group-hover:text-[#4FB08C] transition-colors shrink-0" />
+                  <span className="text-[15px] font-medium text-[#F7F6F0] shrink-0">Email</span>
+                  <span className="font-mono text-xs sm:text-sm text-[#F7F6F0]/70 truncate">{person.email}</span>
                 </div>
-                <div className="flex items-center gap-1.5 font-mono text-xs px-2.5 py-1 border border-white/20 bg-white/[0.06] rounded-[2px] text-[#F7F6F0] group-hover:border-[#4FB08C] group-hover:text-[#4FB08C] transition-colors">
+                {/* On mobile, remove the click to copy button */}
+                <div className="hidden sm:flex items-center gap-1.5 font-mono text-xs px-2.5 py-1 border border-white/20 bg-white/[0.06] rounded-[2px] text-[#F7F6F0] group-hover:border-[#4FB08C] group-hover:text-[#4FB08C] transition-colors shrink-0">
                   {copied ? (
                     <>
                       <Check className="w-3.5 h-3.5 text-[#4FB08C]" />
@@ -122,6 +123,11 @@ export function Contact() {
                     </>
                   )}
                 </div>
+                {copied && (
+                  <span className="sm:hidden font-mono text-xs text-[#4FB08C] flex items-center gap-1 shrink-0">
+                    <Check className="w-3.5 h-3.5" /> copied!
+                  </span>
+                )}
               </button>
             )}
 
